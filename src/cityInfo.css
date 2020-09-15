@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  top: -200px;
+  right: -360px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.row {
+  position: relative;
+  top: 20px;
+
+  font-size: 20px;
+}
+
+.symbol {
+  position: relative;
+  right: 30px;
+}
+.active {
+  color: white;
+}
+.col-2 {
+  position: relative;
+  top: 50px;
+}
+.weatherIcon {
+  position: relative;
+  left: -200px;
+  top: -100px;
+}
+.temp {
+  position: relative;
+  left: -50px;
+  font-size: 30px;
+}
+.units {
+  position: relative;
+  left: -50px;
+}
