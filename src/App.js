@@ -28,6 +28,15 @@ export default function App() {
 
           <WeatherInfo />
           <Forecast />
+          <p class="website">
+            <a
+              href="https://github.com/aclementi26/weatherapp-react"
+              target="_blank"
+            >
+              Open-source code
+            </a>
+            by Alison Clementi
+          </p>
         </div>
       </div>
     </div>
