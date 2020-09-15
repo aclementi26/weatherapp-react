@@ -17,7 +17,7 @@ export default function App() {
         <div className="content">
           <h1>Weather Bot</h1>
           <div>
-            <img src={robot} alt="this is robot image" class="pic" />
+            <img src={robot} alt="this is robot" class="pic" />
           </div>
 
           <div className="info"></div>
@@ -31,7 +31,7 @@ export default function App() {
           <p class="website">
             <a
               href="https://github.com/aclementi26/weatherapp-react"
-              target="_blank"
+              rel="noopener noreferrer"
             >
               Open-source code
             </a>
