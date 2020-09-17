@@ -1,6 +1,16 @@
-import React from "react";
-import WeatherIcon from "./weatherIcon";
+import React, { useState } from "react";
+import axios from "axios";
+import WeatherIcon from "./WeatherIcon";
 export default function cityInfo() {
+  const [temp, setTemp] = useState(null);
+  function handleCity(response) {
+    setTemp(response.data.main.temp);
+  }
+
+  const apiKey = "528d4f65c0d969adf7b1c6c8cc89d6d4";
+  let city = "Philadelphia";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(handleCity);
   return (
     <div className="containor">
       <div className="row">
@@ -14,7 +24,7 @@ export default function cityInfo() {
           </div>
         </div>
         <div className="col-3">
-          <span className="temp">85</span>
+          <span className="temp">{Math.round(temp)}</span>
           <span className="units">
             <a href="/" className="active">
               °F
