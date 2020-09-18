@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import WeatherIcon from "./WeatherIcon";
-export default function cityInfo() {
+import WeatherIcon from "./weatherIcon";
+
+export default function CityInfo() {
   const [temp, setTemp] = useState(null);
   function handleCity(response) {
     setTemp(response.data.main.temp);
