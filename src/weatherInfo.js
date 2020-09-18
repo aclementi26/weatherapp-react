@@ -16,15 +16,14 @@ export default function WeatherInfo() {
     <div class="city">
       <div className="col-6">
         <ul>
-          <li className="text-capitalized">
-            <span id="sky"></span>
-            {weather.description}
+          <li>
+            <span id="sky"></span> sunny
           </li>
-          <li className="text-capitalized">
+          <li>
             <span id="humidity"></span>humidity:{weather.humidity}
             {""}%
           </li>
-          <li className="text-capitalized">
+          <li>
             <span id="wind"> </span>wind: 2 mph
           </li>
         </ul>
