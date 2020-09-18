@@ -3,12 +3,12 @@ import axios from "axios";
 import WeatherIcon from "./weatherIcon";
 
 export default function CityInfo() {
-  const [temp, setTemp] = useState(null);
+  const [temp, setTemp] = useState(0);
   function handleCity(response) {
     setTemp(response.data.main.temp);
   }
 
-  const apiKey = "528d4f65c0d969adf7b1c6c8cc89d6d4";
+  const apiKey = "a9104f2314b512cecea71c4724f538fc";
   let city = "Philadelphia";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(handleCity);

@@ -4,6 +4,7 @@ export default function WeatherInfo() {
   let [weather, setWeather] = useState({});
   function handleResponse(response) {
     setWeather({
+      description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
     });
   }
@@ -15,14 +16,15 @@ export default function WeatherInfo() {
     <div class="city">
       <div className="col-6">
         <ul>
-          <li>
-            <span id="sky"></span> sunny
+          <li className="text-capitalized">
+            <span id="sky"></span>
+            {weather.description}
           </li>
-          <li>
+          <li className="text-capitalized">
             <span id="humidity"></span>humidity:{weather.humidity}
             {""}%
           </li>
-          <li>
+          <li className="text-capitalized">
             <span id="wind"> </span>wind: 2 mph
           </li>
         </ul>
