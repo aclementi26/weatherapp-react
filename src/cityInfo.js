@@ -11,7 +11,7 @@ export default function CityInfo(props) {
         <div className="col-2">
           {" "}
           <div className="symbol">
-            <WeatherIcon />
+            <WeatherIcon code={props.data.icon} />
           </div>
         </div>
         <div className="col-3">
