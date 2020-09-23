@@ -20,6 +20,7 @@ export default function Search(props) {
       wind: response.data.wind.speed,
       temperature: response.data.main.temp,
       city: response.data.name,
+      icon: response.data.weather[0].icon,
     });
     setReady(true);
   }
