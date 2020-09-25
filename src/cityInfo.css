@@ -18,6 +18,8 @@
 }
 .active {
   color: white;
+  cursor: default;
+  text-decoration: none;
 }
 .col-2 {
   position: relative;
@@ -37,4 +39,9 @@
 .units {
   position: relative;
   left: -50px;
+}
+.cel {
+  cursor: default;
+  color: white;
+  text-decoration: none;
 }

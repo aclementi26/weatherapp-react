@@ -21,6 +21,7 @@ export default function App() {
           <p className="website">
             <a
               href="https://github.com/aclementi26/weatherapp-react"
+              target="_blank"
               rel="noopener noreferrer"
             >
               Open-source code

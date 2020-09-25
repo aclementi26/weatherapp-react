@@ -15,11 +15,9 @@ export default function Temp(props) {
       <div>
         <span className="temp">{Math.round(props.fahrenheit)}</span>
         <span className="units">
-          <a href="/" className="active">
-            °F
-          </a>
+          <a href="/">°F</a>
           {""}|
-          <a href="/" onClick={convertCelsius}>
+          <a href="/" onClick={convertCelsius} className="cel">
             °C
           </a>
         </span>
