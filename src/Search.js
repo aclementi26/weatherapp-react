@@ -83,7 +83,7 @@ export default function Search(props) {
         <CityInfo weather={weather} defaultCity="Philadelphia" />
 
         <WeatherInfo weather={weather} />
-        <Forecast city={weather.city} />
+        <Forecast city={weather.city} unit={unit} />
       </>
     );
   } else {
