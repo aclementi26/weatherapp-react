@@ -17,7 +17,7 @@ export default function ForecastPreview(props) {
             <WeatherIcon code={props.data.weather[0].icon} />
           </div>
         </div>
-        <div className="col-2">{Math.round(props.data.main.temp)}</div>
+        <div className="col-2">{Math.round(props.data.main.temp)}º</div>
       </div>
     </div>
   );
