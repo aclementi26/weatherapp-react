@@ -12,6 +12,8 @@ export default function Search(props) {
   const [ready, setReady] = useState(false);
   let [weather, setWeather] = useState({});
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("fahrenheit");
+
   function handleResponse(response) {
     setWeather({
       description: response.data.weather[0].description,
@@ -80,10 +82,19 @@ export default function Search(props) {
           </div>
         </form>
 
-        <CityInfo weather={weather} defaultCity="Philadelphia" />
+        <CityInfo
+          weather={weather}
+          defaultCity="Philadelphia"
+          unit={weather.unit}
+          setUnit={weather.setUnit}
+        />
 
         <WeatherInfo weather={weather} />
-        <Forecast city={weather.city} unit={weather.unit} />
+        <Forecast
+          city={weather.city}
+          unit={weather.unit}
+          setUnit={weather.setUnit}
+        />
       </>
     );
   } else {
