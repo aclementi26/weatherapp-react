@@ -16,7 +16,11 @@ export default function CityInfo(props) {
           </div>
         </div>
         <div className="col-3">
-          <Temp fahrenheit={props.weather.temperature} />
+          <Temp
+            fahrenheit={props.weather.temperature}
+            unit={props.weather.unit}
+            setUnit={props.weather.setUnit}
+          />
         </div>
       </div>
     </div>
