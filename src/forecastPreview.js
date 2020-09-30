@@ -7,18 +7,37 @@ export default function ForecastPreview(props) {
     let hours = date.getHours();
     return `${hours}:00`;
   }
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col-2">{hours()}</div>
-        <div className="col-2">
-          {" "}
-          <div className="icon">
-            <WeatherIcon code={props.data.weather[0].icon} />
+  if (props.unit === "fahrenheit") {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-2">{hours()}</div>
+          <div className="col-2">
+            {" "}
+            <div className="icon">
+              <WeatherIcon code={props.data.weather[0].icon} />
+            </div>
+          </div>
+          <div className="col-2">{Math.round(props.data.main.temp)}º</div>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-2">{hours()}</div>
+          <div className="col-2">
+            {" "}
+            <div className="icon">
+              <WeatherIcon code={props.data.weather[0].icon} />
+            </div>
+          </div>
+          <div className="col-2">
+            {Math.round(((props.data.main.temp - 32) * 5) / 9)}º
           </div>
         </div>
-        <div className="col-2">{Math.round(props.data.main.temp)}º</div>
       </div>
-    </div>
-  );
+    );
+  }
 }
