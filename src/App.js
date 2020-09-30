@@ -25,7 +25,7 @@ export default function App() {
               rel="noopener noreferrer"
             >
               Open-source code
-            </a>
+            </a>{" "}
             by Alison Clementi
           </p>
         </div>
